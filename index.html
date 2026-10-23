@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jumanax: Cosmic Atlas</title>
+  <meta
+    name="description"
+    content="Jumanax: Cosmic Atlas is a curated space learning website featuring astronauts, planets, moons, missions, galaxies, and mysterious space questions."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="startScreen" class="start-screen show">
+    <div class="start-card">
+      <div class="badge">Jumanax</div>
+      <h1>Jumanah says, Welcome to the Jumanax website!</h1>
+      <p>
+        Explore a curated cosmic atlas of planets, missions, astronauts, galaxies,
+        and space mysteries.
+      </p>
+      <button id="startBtn" class="primary-btn">Enter the Atlas</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <div class="brand">
+        <span class="brand-mark">✦</span>
+        <span>Jumanax</span>
+      </div>
+      <div class="nav-links">
+        <a href="#explore">Explore</a>
+        <a href="#astronauts">Astronauts</a>
+        <a href="#curiosity">Curiosity</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A growing space learning collection</p>
+        <h2>Choose your astronaut and begin your cosmic journey.</h2>
+        <p class="lead">
+          This collection is curated and growing. It is not a complete list of every
+          object discovered in space, but it is a friendly, educational starting point.
+        </p>
+      </div>
+
+      <div class="hero-panel">
+        <div class="mini-stat">
+          <strong id="statsCount">0</strong>
+          <span>space entries</span>
+        </div>
+        <div class="mini-stat">
+          <strong>12+</strong>
+          <span>astronaut profiles</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="astronauts" class="section">
+      <div class="section-header">
+        <h3>Featured Astronauts</h3>
+      </div>
+
+      <div class="name-form">
+        <label for="astronautNameInput">Name your astronaut</label>
+        <div class="name-row">
+          <input
+            id="astronautNameInput"
+            type="text"
+            maxlength="20"
+            placeholder="Type a name..."
+            aria-label="Name your astronaut"
+          />
+          <button id="saveNameBtn" class="secondary-btn">Save</button>
+        </div>
+      </div>
+
+      <div id="astronautGrid" class="astronaut-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="explore" class="section">
+      <div class="section-header">
+        <h3>Space Directory</h3>
+      </div>
+
+      <div class="search-panel">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search for a planet, moon, mission, galaxy..."
+          aria-label="Search space directory"
+        />
+        <div class="filter-row" id="filterRow" aria-label="Space categories"></div>
+      </div>
+
+      <div class="directory-layout">
+        <aside class="directory-list">
+          <div id="directoryList" class="directory-items"></div>
+        </aside>
+
+        <article class="profile-panel">
+          <div id="objectProfile" class="profile-content"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="curiosity" class="section">
+      <div class="section-header">
+        <h3>Curious Astronomy Facts & Questions</h3>
+      </div>
+
+      <div class="curiosity-grid">
+        <div class="fact-box">
+          <h4>Established Facts</h4>
+          <ul id="factList"></ul>
+        </div>
+
+        <div class="question-box">
+          <h4>Open Questions</h4>
+          <ul id="questionList"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p><strong>Jumanax: Cosmic Atlas</strong></p>
+        <p>Made with AI assistance.</p>
+      </div>
+      <div class="sources">
+        <a href="https://www.nasa.gov" target="_blank" rel="noreferrer">NASA</a>
+        <a href="https://www.jpl.nasa.gov" target="_blank" rel="noreferrer">JPL</a>
+        <a href="https://www.esa.int" target="_blank" rel="noreferrer">ESA</a>
+        <a href="https://images.nasa.gov" target="_blank" rel="noreferrer">NASA Image Library</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
